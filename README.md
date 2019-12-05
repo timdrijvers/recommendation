@@ -4,7 +4,7 @@ Recommendation
 A simple item-item and user-item recommendation engine using cosine similarity. 
 
 ## General overview
-As input a user x item binary matrix is used. `gonum` Matrixes can be used or a 
+As input a user x item binary matrix is used. `gonum` Matrixes can be used or a `LabeledMatrix`.
 
 - First a item x item similarity matrix is generated, using `NewCosineLabeledMatrix`. Each cell contains the cosine similarity between the corresponding row and column item.
 - Using this matrix a second matrix can be generated containing the top-N most similar items per item. Taking each row (or column) sorting these to get the most similar items. `NewTopSimilaritiesFromMatrix` will help you to do so.
